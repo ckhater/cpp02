@@ -12,6 +12,8 @@ private:
 
 public:
 	Fixed(void);
+	Fixed(const int i);
+	Fixed(const float i);
 	Fixed(Fixed const &fix);
 	~Fixed(void);
 	Fixed &operator=(Fixed const &fix);
@@ -21,5 +23,6 @@ public:
 	float toFloat( void ) const;
 	int toInt( void ) const;
 };
+std::ostream& operator<<(std::ostream& out,const Fixed& f);
 
 #endif
