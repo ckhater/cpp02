@@ -72,26 +72,31 @@ Fixed   Fixed::operator>(const Fixed &f2)const{
         return Fixed(1);
     return Fixed(0);
 }
+
 Fixed   Fixed::operator<(const Fixed &f2)const{
     if(this->toFloat() < f2.toFloat())
         return Fixed(1);
     return Fixed(0);
 }
+
 Fixed   Fixed::operator>=(const Fixed &f2)const{
     if(this->toFloat() >= f2.toFloat())
         return Fixed(1);
     return Fixed(0);
 }
+
 Fixed   Fixed::operator<=(const Fixed &f2)const{
     if(this->toFloat() <= f2.toFloat())
         return Fixed(1);
     return Fixed(0);
 }
+
 Fixed   Fixed::operator==(const Fixed &f2)const{
     if(this->toFloat() == f2.toFloat())
         return Fixed(1);
     return Fixed(0);
 }
+
 Fixed   Fixed::operator!=(const Fixed &f2)const{
     if(this->toFloat() != f2.toFloat())
         return Fixed(1);
@@ -115,9 +120,11 @@ Fixed   Fixed::operator*(const Fixed &f2)const{
 Fixed   Fixed::operator-(const Fixed &f2)const{
     return(Fixed(this->toFloat() - f2.toFloat()));
 }
+
 Fixed   Fixed::operator+(const Fixed &f2)const{
     return(Fixed(this->toFloat() + f2.toFloat()));
 }
+
 Fixed   Fixed::operator/(const Fixed &f2)const{
     if(f2.toInt() == 0)
     {
@@ -128,3 +135,26 @@ Fixed   Fixed::operator/(const Fixed &f2)const{
     return(Fixed(this->toFloat() / f2.toFloat()));
 }
 
+Fixed Fixed::min(Fixed &f1, Fixed &f2){
+    if(f1.toFloat() > f2.toFloat())
+        return(f2);
+    return(f1);
+}
+
+Fixed Fixed::max(Fixed &f1, Fixed &f2){
+    if(f1.toFloat() > f2.toFloat())
+        return(f1);
+    return(f2);
+}
+
+Fixed const Fixed::min(Fixed const &f1, Fixed const &f2){
+    if(f1.toFloat() > f2.toFloat())
+        return(f2);
+    return(f1);
+}
+
+Fixed const Fixed::max(Fixed const &f1, Fixed const &f2){
+    if(f1.toFloat() > f2.toFloat())
+        return(f1);
+    return(f2);
+}

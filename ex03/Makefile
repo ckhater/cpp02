@@ -1,5 +1,5 @@
 Name=bsp
-FLAG=-std=c++98 -Wall -Wextra -Werror 
+FLAG=-std=c++98 -Wall -Wextra -Werror  -g3
 SRC=main.cpp Fixed.cpp  Point.cpp bsp.cpp
 OBJ=$(SRC:.cpp=.o)
 

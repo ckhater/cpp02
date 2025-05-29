@@ -5,15 +5,20 @@ Point::Point(void):x(0),y(0){
 }
 
 Point   &Point::operator=(Point const &pt){
-    std::cout << "Copy assignement called"<< std::endl;
+    if (this != &pt)
+    {
+        (Fixed) this->y = pt.y;
+        (Fixed) this->x = pt.x;
+    }
+    return *this;
 }
 
-Point::Point(const float x, const float y){
-    std::cout << "Constructor called"<< std::endl;
+Point::Point(const float x, const float y):x(x),y(y){
+    // std::cout << "Constructor called"<< std::endl;
 }
 
-Point::Point(Point const &pt){
-
+Point::Point(Point const &pt):x(pt.x),y(pt.y){
+    // std::cout << "copy constructor called"<< std::endl;
 }
 
 Point::~Point(void){
