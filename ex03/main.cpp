@@ -9,5 +9,7 @@ int main(){
 
     std::cout << bsp(a,b,c,p)<<std::endl;
     std::cout << bsp(a,b,c,pv)<<std::endl;
+	Point const d(0,0);
+    std::cout << bsp(a,b,c,d)<<std::endl;
     return(0);
 }

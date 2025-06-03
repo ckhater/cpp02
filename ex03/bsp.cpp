@@ -22,7 +22,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point){
     // std::cout<<"j=="<<j.toFloat()<<std::endl;
     k = Point::halfPlaneMeth(c, a, point);
     // std::cout<<"k=="<<k.toFloat()<<std::endl;
-    if(i >= 0 && j >= 0 && k >= 0)
+    if(i > 0 && j > 0 && k > 0)
         return true;
     return false;
 }
